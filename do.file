@@ -1,0 +1,715 @@
+STATA 15 - DO.FILE
+
+CONTINUOUS OUTCOME
+
+metan s_bas_ntotal s_end_media_dep s_end_sd a_bas_ntotal a_end_media_dep a_end_sd_dep, label(namevar=author, yearvar=year) random hedges nointeger
+
+           Study     |     SMD   [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+BLUMBERGER et al. (2 | -0.132      -0.936     0.672          3.61
+PALM, U. et al. (201 |  0.594      -0.264     1.452          3.41
+BENNABI et al. (2015 | -0.012      -0.584     0.560          4.52
+LOO., C.K. et al.  ( | -0.135      -0.756     0.485          4.32
+BOGGIO, P. S. et al. |  0.858       0.115     1.600          3.84
+SAMPAIO-JUNIOR, B. e |  0.969       0.428     1.511          4.65
+BRUNONI, A.R. et al. |  0.745       0.221     1.270          4.72
+BRUNONI, A.R. et al. |  0.524       0.009     1.039          4.76
+LOO., C.K. et al.  ( |  0.303      -0.190     0.796          4.85
+SALEHINEJAD, M.A. et |  1.045       0.275     1.814          3.74
+DASTJERDI, G. et al  | -1.237      -2.067    -0.407          3.51
+LOO et al. (Unipolar | -0.526      -0.962    -0.091          5.08
+LOO et al. (Bipolar) |  1.105       0.397     1.813          3.97
+SALEHINEJAD, M.A. et |  1.302       0.406     2.197          3.28
+BRUNONI, A.R. et al. |  0.544       0.214     0.873          5.47
+BRUNONI, A.R. et al. |  0.436      -0.219     1.091          4.18
+VALIENGO, C.L. et al |  0.607       0.028     1.187          4.49
+SEGRAVE et al. (2014 |  0.241      -0.563     1.044          3.61
+PAVLOVA, E.L. et al. |  0.881       0.358     1.404          4.73
+FREGNI, F.  (2006)   |  1.186       0.163     2.209          2.88
+MAYUR, P et al. (201 | -0.386      -1.378     0.606          2.97
+NORD, C. et al (2019 |  0.257      -0.374     0.888          4.28
+SHARAFI, E et al. (2 |  1.759       0.899     2.620          3.40
+VIGOD, S et al. (201 |  1.085       0.132     2.039          3.09
+WELCH, E et al. (201 | -0.483      -1.596     0.630          2.62
+---------------------+---------------------------------------------------
+D+L pooled SMD       |  0.457       0.219     0.696        100.00
+---------------------+---------------------------------------------------
+
+  Heterogeneity chi-squared =  80.39 (d.f. = 24) p = 0.000
+  I-squared (variation in SMD attributable to heterogeneity) =  70.1%
+  Estimate of between-study variance Tau-squared =  0.2422
+
+  Test of SMD=0 : z=   3.76 p = 0.000
+
+  
+  
+  
+  Funnel Plot: 
+  
+   metafunnel _ES _seES
+   
+   
+   
+   BINARY OUTCOMES
+   
+   . metan a_resp a_nonresp s_resp s_nonresp, label(namevar=author, yearvar=year) random or nointeger
+
+           Study     |     OR    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+BLUMBERGER et al. (2 |  0.833       0.046    15.086          1.81
+PALM, U. et al. (201 |  3.286       0.120    89.812          1.41
+BENNABI et al. (2015 |  2.316       0.381    14.079          4.16
+LOO., C.K. et al.  ( |  1.714       0.400     7.340          5.86
+BOGGIO, P. S. et al. |  1.455       0.253     8.354          4.39
+SAMPAIO-JUNIOR, B. e |  4.534       1.506    13.649          8.65
+BRUNONI, A.R. et al. |  3.455       1.195     9.990          9.06
+BRUNONI, A.R. et al. |  3.824       1.150    12.713          7.72
+LOO., C.K. et al.  ( |  0.931       0.212     4.097          5.70
+LOO et al. (Unipolar |  0.427       0.133     1.368          8.05
+LOO et al. (Bipolar) |  0.833       0.146     4.752          4.42
+BRUNONI, A.R. et al. |  2.564       1.225     5.366         13.36
+BRUNONI, A.R. et al. |  5.333       0.557    51.091          2.83
+VALIENGO, C.L. et al | 13.800       1.582   120.378          3.05
+SEGRAVE et al. (2014 |  2.133       0.203    22.444          2.64
+PAVLOVA, E.L. et al. |  7.243       2.289    22.918          8.16
+NORD, C. et al (2019 |  1.714       0.477     6.163          7.07
+WELCH, E et al. (201 |  0.500       0.024    10.251          1.67
+---------------------+---------------------------------------------------
+D+L pooled OR        |  2.279       1.520     3.416        100.00
+---------------------+---------------------------------------------------
+
+  Heterogeneity chi-squared =  22.65 (d.f. = 17) p = 0.161
+  I-squared (variation in OR attributable to heterogeneity) =  24.9%
+  Estimate of between-study variance Tau-squared =  0.1773
+
+  Test of OR=1 : z=   3.99 p = 0.000
+  
+  
+  metan a_rem a_nonrem s_rem s_nonrem, label(namevar=author, yearvar=year) random or nointeger
+
+           Study     |     OR    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+BLUMBERGER et al. (2 |  0.846       0.015    46.259          0.99
+BENNABI et al. (2015 |  5.698       0.259   125.357          1.66
+LOO., C.K. et al.  ( |  1.889       0.385     9.271          6.26
+BOGGIO, P. S. et al. |  4.529       0.229    89.436          1.78
+SAMPAIO-JUNIOR, B. e |  2.400       0.704     8.183         10.52
+BRUNONI, A.R. et al. |  2.042       0.707     5.895         14.08
+BRUNONI, A.R. et al. |  4.333       1.203    15.605          9.64
+LOO., C.K. et al.  ( |  1.000       0.019    52.486          1.01
+LOO et al. (Unipolar |  0.151       0.018     1.284          3.45
+LOO et al. (Bipolar) |  0.469       0.038     5.720          2.53
+BRUNONI, A.R. et al. |  2.106       0.873     5.079         20.43
+BRUNONI, A.R. et al. |  0.842       0.049    14.565          1.95
+VALIENGO, C.L. et al | 12.632       0.649   245.905          1.80
+SEGRAVE et al. (2014 |  1.500       0.134    16.819          2.71
+PAVLOVA, E.L. et al. |  2.721       0.942     7.861         14.07
+NORD, C. et al (2019 |  3.643       0.633    20.956          5.17
+SHARAFI, E et al. (2 |  1.000       0.019    53.659          1.00
+WELCH, E et al. (201 |  0.579       0.010    33.502          0.96
+---------------------+---------------------------------------------------
+D+L pooled OR        |  2.120       1.424     3.155        100.00
+---------------------+---------------------------------------------------
+
+  Heterogeneity chi-squared =  12.50 (d.f. = 17) p = 0.769
+  I-squared (variation in OR attributable to heterogeneity) =   0.0%
+  Estimate of between-study variance Tau-squared =  0.0000
+
+  Test of OR=1 : z=   3.70 p = 0.000
+
+
+ 
+
+ . metan s_dropout s_end_ntotal a_dropout a_end_ntotal, label(namevar=author, yearvar=year) random or nointeger
+
+           Study     |     OR    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+BLUMBERGER et al. (2 |  1.250       0.196     7.956          4.24
+PALM, U. et al. (201 |  1.000       0.018    54.830          0.91
+BENNABI et al. (2015 |  1.316       0.413     4.199         10.80
+LOO., C.K. et al.  ( |  6.333       0.667    60.163          2.87
+BOGGIO, P. S. et al. |  2.905       0.054   155.791          0.92
+SAMPAIO-JUNIOR, B. e |  0.750       0.153     3.687          5.73
+BRUNONI, A.R. et al. |  2.250       0.507     9.993          6.54
+BRUNONI, A.R. et al. |  1.000       0.226     4.431          6.56
+LOO., C.K. et al.  ( |  0.778       0.249     2.428         11.22
+SALEHINEJAD, M.A. et |  1.000       0.019    53.659          0.92
+DASTJERDI, G. et al  |  0.512       0.009    27.683          0.91
+LOO et al. (Unipolar |  0.569       0.127     2.552          6.46
+LOO et al. (Bipolar) |  2.400       0.198    29.131          2.33
+SALEHINEJAD, M.A. et |  1.000       0.018    54.465          0.91
+BRUNONI, A.R. et al. |  0.298       0.106     0.835         13.64
+BRUNONI, A.R. et al. |  2.143       0.574     7.994          8.39
+VALIENGO, C.L. et al |  1.571       0.238    10.365          4.09
+SEGRAVE et al. (2014 |  1.947       0.036   106.029          0.91
+PAVLOVA, E.L. et al. |  0.161       0.008     3.034          1.68
+FREGNI, F.  (2006)   |  1.000       0.018    55.799          0.90
+MAYUR, P et al. (201 |  1.000       0.018    56.462          0.89
+NORD, C. et al (2019 |  6.786       0.711    64.722          2.86
+SHARAFI, E et al. (2 |  1.000       0.019    53.659          0.92
+VIGOD, S et al. (201 |  0.444       0.034     5.880          2.18
+WELCH, E et al. (201 |  0.313       0.024     4.024          2.23
+---------------------+---------------------------------------------------
+D+L pooled OR        |  0.992       0.677     1.452        100.00
+---------------------+---------------------------------------------------
+
+  Heterogeneity chi-squared =  18.05 (d.f. = 24) p = 0.801
+  I-squared (variation in OR attributable to heterogeneity) =   0.0%
+  Estimate of between-study variance Tau-squared =  0.0000
+
+  Test of OR=1 : z=   0.04 p = 0.966
+  
+ 
+ SENSITIVITY ANALYSIS 
+ 
+ metaninf s_bas_ntotal s_end_media_dep s_end_sd a_bas_ntotal a_end_media_dep a_end_sd_dep, label(namevar=author, yearvar=year) random hedges
+
+------------------------------------------------------------------------------
+ Study omitted     |   Estimate       [95%  Conf.  Interval]
+-------------------+----------------------------------------------------------
+ BLUMBERGER et al. (2012)|.46815228   .21621595    .7200886
+ LOO., C.K. et al.  (2010)|.47725916  .22618796    .72833031
+ BOGGIO, P. S. et al.  (2008)|.41287777.15849353   .66726196
+ SAMPAIO-JUNIOR, B. et al.  (2018)|.39446568.14543083.64350051
+ BRUNONI, A.R. et al. (+ Sertraline) (2013)|.41335657.15375225.67296088
+ BRUNONI, A.R. et al. (- Sertraline) (2013)|.43188599.16664529.69712669
+ LOO., C.K. et al.  (2012)|.45022827  .18405318    .71640337
+ LOO et al. (Unipolar) (2018)|.52652848.34547454   .70758235
+ LOO et al. (Bipolar) (2018)|.39545393.14896205    .64194578
+ BRUNONI, A.R. et al.  (2017)|.42949101.15428232   .7046997
+ BRUNONI, A.R. et al.  (2014)|.43867674.17732915   .70002437
+ VALIENGO, C.L. et al. (2017)|.42588097.16395596   .68780601
+ SEGRAVE et al. (2014)|.4490338       .19139494    .70667261
+ NORD, C. et al (2019)|.45108631      .1899195     .71225309
+ VIGOD, S et al. (2019)|.40907919     .15972996    .65842843
+-------------------+----------------------------------------------------------
+ Combined          |   .43741667      .19218119    .68265215
+----------------------------------------------------------------------------
+
+
+METAREGRESSIONS
+
+
+. metareg _ES mulheres, wsse(_selogES) graph
+
+Meta-regression                                       Number of obs  =      25
+REML estimate of between-study variance               tau2           =   1.515
+% residual variation due to heterogeneity             I-squared_res  =  54.13%
+Proportion of between-study variance explained        Adj R-squared  =   5.30%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+    mulheres |  -.0307585   .0223367    -1.38   0.182    -.0769655    .0154484
+       _cons |   3.470513    1.40013     2.48   0.021     .5741225    6.366903
+------------------------------------------------------------------------------
+
+. *(1 variable, 26 observations pasted into data editor)
+
+. save "C:\Users\Lais\Documents\MA_tDCS_MDD\MA tdcs MDD review 09.01.dta", replac
+> e
+file C:\Users\Lais\Documents\MA_tDCS_MDD\MA tdcs MDD review 09.01.dta saved
+
+. metareg _ES age_total, wsse(_selogES)
+
+Meta-regression                                       Number of obs  =      25
+REML estimate of between-study variance               tau2           =   1.654
+% residual variation due to heterogeneity             I-squared_res  =  56.74%
+Proportion of between-study variance explained        Adj R-squared  =  -3.36%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+   age_total |   -.023047   .0423711    -0.54   0.592    -.1106983    .0646043
+       _cons |   2.653771   1.960731     1.35   0.189     -1.40231    6.709852
+------------------------------------------------------------------------------
+
+. metareg _ES durationcurrentepisodemonths, wsse(_selogES)
+
+Meta-regression                                       Number of obs  =      12
+REML estimate of between-study variance               tau2           =   .1822
+% residual variation due to heterogeneity             I-squared_res  =   0.00%
+Proportion of between-study variance explained        Adj R-squared  = -20.67%
+With Knapp-Hartung modification
+--------------------------------------------------------------------------------
+           _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+---------------+----------------------------------------------------------------
+durationcurr~s |  -.0339937   .0785988    -0.43   0.675    -.2091228    .1411353
+         _cons |   1.440284   .7532795     1.91   0.085    -.2381274    3.118695
+--------------------------------------------------------------------------------
+
+. metareg _ES density, wsse(_selogES)
+
+Meta-regression                                       Number of obs  =      24
+REML estimate of between-study variance               tau2           =   .9325
+% residual variation due to heterogeneity             I-squared_res  =  46.14%
+Proportion of between-study variance explained        Adj R-squared  =  43.72%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+     density |  -4.576975   1.693524    -2.70   0.013    -8.089129   -1.064822
+       _cons |   4.580189   1.143525     4.01   0.001     2.208663    6.951716
+------------------------------------------------------------------------------
+
+. metareg _ES numberofsessions , wsse(_selogES)
+
+Meta-regression                                       Number of obs  =      25
+REML estimate of between-study variance               tau2           =   .8007
+% residual variation due to heterogeneity             I-squared_res  =  39.73%
+Proportion of between-study variance explained        Adj R-squared  =  49.95%
+With Knapp-Hartung modification
+--------------------------------------------------------------------------------
+           _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+---------------+----------------------------------------------------------------
+numberofsess~s |  -.1694923   .0646151    -2.62   0.015    -.3031587   -.0358258
+         _cons |   3.727712    .872547     4.27   0.000     1.922711    5.532713
+--------------------------------------------------------------------------------
+
+. metareg _ES total_charge , wsse(_selogES)
+
+Meta-regression                                       Number of obs  =      24
+REML estimate of between-study variance               tau2           =   .9706
+% residual variation due to heterogeneity             I-squared_res  =  45.26%
+Proportion of between-study variance explained        Adj R-squared  =  41.43%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+total_charge |  -.0567851   .0226167    -2.51   0.020    -.1036892    -.009881
+       _cons |   2.967575    .624553     4.75   0.000     1.672331    4.262818
+------------------------------------------------------------------------------
+
+. metareg _ES n_total, wsse(_selogES)
+
+Meta-regression                                       Number of obs  =      25
+REML estimate of between-study variance               tau2           =   1.474
+% residual variation due to heterogeneity             I-squared_res  =  50.63%
+Proportion of between-study variance explained        Adj R-squared  =   7.89%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       total |  -.0118191   .0104032    -1.14   0.268    -.0333398    .0097015
+       _cons |   2.209079   .6355289     3.48   0.002     .8943878    3.523771
+------------------------------------------------------------------------------
+
+.  metareg _ES total_dropout , wsse(_selogES)
+
+Meta-regression                                       Number of obs  =      25
+REML estimate of between-study variance               tau2           =   1.623
+% residual variation due to heterogeneity             I-squared_res  =  53.91%
+Proportion of between-study variance explained        Adj R-squared  =  -1.47%
+With Knapp-Hartung modification
+-------------------------------------------------------------------------------
+          _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+total_dropout |  -.0334069   .0474454    -0.70   0.488    -.1315551    .0647413
+        _cons |   1.896942   .5453694     3.48   0.002     .7687593    3.025124
+-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+metan s_bas_ntotal s_end_media_dep s_end_sd a_bas_ntotal a_end_media_dep a_end_
+> sd_dep, label(namevar=author, yearvar=year) random hedges nointeger by ( anodo)
+
+           Study     |     SMD   [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+     f3
+BLUMBERGER et al. (2 |   -0.132    -0.936     0.672          3.94
+PALM, U. et al. (201 |    0.594    -0.264     1.452          3.74
+BOGGIO, P. S. et al. |    0.858     0.115     1.600          4.19
+SAMPAIO-JUNIOR, B. e |    0.969     0.428     1.511          5.05
+BRUNONI, A.R. et al. |    0.745     0.221     1.270          5.13
+BRUNONI, A.R. et al. |    0.524     0.009     1.039          5.17
+LOO et al. (Unipolar |   -0.526    -0.962    -0.091          5.51
+LOO et al. (Bipolar) |    1.105     0.397     1.813          4.33
+SALEHINEJAD, M.A. et |    1.302     0.406     2.197          3.59
+BRUNONI, A.R. et al. |    0.544     0.214     0.873          5.92
+BRUNONI, A.R. et al. |    0.436    -0.219     1.091          4.56
+VALIENGO, C.L. et al |    0.607     0.028     1.187          4.89
+SEGRAVE et al. (2014 |    0.241    -0.563     1.044          3.95
+PAVLOVA, E.L. et al. |    0.881     0.358     1.404          5.13
+FREGNI, F.  (2006)   |    1.186     0.163     2.209          3.16
+MAYUR, P et al. (201 |   -0.386    -1.378     0.606          3.26
+NORD, C. et al (2019 |    0.257    -0.374     0.888          4.66
+SHARAFI, E et al. (2 |    1.759     0.899     2.620          3.73
+VIGOD, S et al. (201 |    1.085     0.132     2.039          3.39
+WELCH, E et al. (201 |   -0.483    -1.596     0.630          2.88
+ Sub-total           |
+  D+L pooled SMD     |    0.572     0.322     0.822         86.19
+---------------------+---------------------------------------------------
+     pf3
+LOO., C.K. et al.  ( |   -0.135    -0.756     0.485          4.71
+LOO., C.K. et al.  ( |    0.303    -0.190     0.796          5.26
+ Sub-total           |
+  D+L pooled SMD     |    0.126    -0.296     0.548          9.97
+---------------------+---------------------------------------------------
+     f4
+DASTJERDI, G. et al  |   -1.237    -2.067    -0.407          3.84
+ Sub-total           |
+  D+L pooled SMD     |   -1.237    -2.067    -0.407          3.84
+---------------------+---------------------------------------------------
+Overall              |           
+  D+L pooled SMD     |    0.457     0.205     0.709        100.00
+---------------------+---------------------------------------------------
+
+Test(s) of heterogeneity:
+               Heterogeneity  degrees of
+                 statistic     freedom      P    I-squared**   Tau-squared
+
+f3                  54.82         19      0.000     65.3%       0.1963
+pf3                  1.18          1      0.278     14.9%       0.0144
+f4                   0.00          0         .         .%       0.0000
+Overall             75.62         22      0.000     70.9%       0.2503
+** I-squared: the variation in SMD attributable to heterogeneity)
+
+Note: between group heterogeneity not calculated;
+only valid with inverse variance method
+
+Significance test(s) of SMD=0
+
+f3                    z=  4.48     p = 0.000
+pf3                   z=  0.59     p = 0.558
+f4                    z=  2.92     p = 0.003
+Overall               z=  3.55     p = 0.000
+-------------------------------------------------------------------------
+
+
+
+
+
+
+. metan s_bas_ntotal s_end_media_dep s_end_sd a_bas_ntotal a_end_media_dep a_end_
+> sd_dep, label(namevar=author, yearvar=year) random hedges nointeger by ( catodo
+> )
+
+           Study     |     SMD   [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+     f4
+BLUMBERGER et al. (2 |   -0.132    -0.936     0.672          3.61
+SAMPAIO-JUNIOR, B. e |    0.969     0.428     1.511          4.65
+BRUNONI, A.R. et al. |    0.745     0.221     1.270          4.72
+BRUNONI, A.R. et al. |    0.524     0.009     1.039          4.76
+SALEHINEJAD, M.A. et |    1.045     0.275     1.814          3.74
+SALEHINEJAD, M.A. et |    1.302     0.406     2.197          3.28
+BRUNONI, A.R. et al. |    0.544     0.214     0.873          5.47
+BRUNONI, A.R. et al. |    0.436    -0.219     1.091          4.18
+VALIENGO, C.L. et al |    0.607     0.028     1.187          4.49
+MAYUR, P et al. (201 |   -0.386    -1.378     0.606          2.97
+SHARAFI, E et al. (2 |    1.759     0.899     2.620          3.40
+VIGOD, S et al. (201 |    1.085     0.132     2.039          3.09
+WELCH, E et al. (201 |   -0.483    -1.596     0.630          2.62
+ Sub-total           |
+  D+L pooled SMD     |    0.646     0.382     0.910         50.99
+---------------------+---------------------------------------------------
+     SOR
+PALM, U. et al. (201 |    0.594    -0.264     1.452          3.41
+BENNABI et al. (2015 |   -0.012    -0.584     0.560          4.52
+BOGGIO, P. S. et al. |    0.858     0.115     1.600          3.84
+PAVLOVA, E.L. et al. |    0.881     0.358     1.404          4.73
+FREGNI, F.  (2006)   |    1.186     0.163     2.209          2.88
+ Sub-total           |
+  D+L pooled SMD     |    0.644     0.219     1.070         19.38
+---------------------+---------------------------------------------------
+     F8
+LOO., C.K. et al.  ( |   -0.135    -0.756     0.485          4.32
+LOO., C.K. et al.  ( |    0.303    -0.190     0.796          4.85
+LOO et al. (Unipolar |   -0.526    -0.962    -0.091          5.08
+LOO et al. (Bipolar) |    1.105     0.397     1.813          3.97
+SEGRAVE et al. (2014 |    0.241    -0.563     1.044          3.61
+NORD, C. et al (2019 |    0.257    -0.374     0.888          4.28
+ Sub-total           |
+  D+L pooled SMD     |    0.173    -0.278     0.623         26.12
+---------------------+---------------------------------------------------
+     f3
+DASTJERDI, G. et al  |   -1.237    -2.067    -0.407          3.51
+ Sub-total           |
+  D+L pooled SMD     |   -1.237    -2.067    -0.407          3.51
+---------------------+---------------------------------------------------
+Overall              |           
+  D+L pooled SMD     |    0.457     0.219     0.696        100.00
+---------------------+---------------------------------------------------
+
+Test(s) of heterogeneity:
+               Heterogeneity  degrees of
+                 statistic     freedom      P    I-squared**   Tau-squared
+
+f4                  24.53         12      0.017     51.1%       0.1099
+SOR                  7.23          4      0.124     44.6%       0.1025
+F8                  17.20          5      0.004     70.9%       0.2192
+f3                   0.00          0         .         .%       0.0000
+Overall             80.39         24      0.000     70.1%       0.2422
+** I-squared: the variation in SMD attributable to heterogeneity)
+
+Note: between group heterogeneity not calculated;
+only valid with inverse variance method
+
+Significance test(s) of SMD=0
+
+f4                    z=  4.79     p = 0.000
+SOR                   z=  2.97     p = 0.003
+F8                    z=  0.75     p = 0.453
+f3                    z=  2.92     p = 0.003
+Overall               z=  3.76     p = 0.000
+-------------------------------------------------------------------------
+
+
+  
+   metan s_bas_ntotal s_end_media_dep s_end_sd a_bas_ntotal a_end_media_dep a_end_sd_dep, label(namevar=author, yearvar=year) random hedges nointeger by ( treatmentstrategy )
+
+           Study     |     SMD   [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+     add-on
+BLUMBERGER et al. (2 |   -0.132    -0.936     0.672          3.94
+PALM, U. et al. (201 |    0.594    -0.264     1.452          3.74
+DASTJERDI, G. et al  |   -1.237    -2.067    -0.407          3.84
+LOO et al. (Unipolar |   -0.526    -0.962    -0.091          5.51
+LOO et al. (Bipolar) |    1.105     0.397     1.813          4.33
+ Sub-total           |
+  D+L pooled SMD     |   -0.045    -0.818     0.727         21.36
+---------------------+---------------------------------------------------
+     augmentation
+BRUNONI, A.R. et al. |    0.745     0.221     1.270          5.13
+BRUNONI, A.R. et al. |    0.544     0.214     0.873          5.92
+BRUNONI, A.R. et al. |    0.436    -0.219     1.091          4.56
+SEGRAVE et al. (2014 |    0.241    -0.563     1.044          3.95
+PAVLOVA, E.L. et al. |    0.881     0.358     1.404          5.13
+MAYUR, P et al. (201 |   -0.386    -1.378     0.606          3.26
+NORD, C. et al (2019 |    0.257    -0.374     0.888          4.66
+WELCH, E et al. (201 |   -0.483    -1.596     0.630          2.88
+ Sub-total           |
+  D+L pooled SMD     |    0.451     0.192     0.710         35.50
+---------------------+---------------------------------------------------
+     monotherapy
+LOO., C.K. et al.  ( |   -0.135    -0.756     0.485          4.71
+BOGGIO, P. S. et al. |    0.858     0.115     1.600          4.19
+SAMPAIO-JUNIOR, B. e |    0.969     0.428     1.511          5.05
+BRUNONI, A.R. et al. |    0.524     0.009     1.039          5.17
+LOO., C.K. et al.  ( |    0.303    -0.190     0.796          5.26
+SALEHINEJAD, M.A. et |    1.302     0.406     2.197          3.59
+VALIENGO, C.L. et al |    0.607     0.028     1.187          4.89
+FREGNI, F.  (2006)   |    1.186     0.163     2.209          3.16
+SHARAFI, E et al. (2 |    1.759     0.899     2.620          3.73
+VIGOD, S et al. (201 |    1.085     0.132     2.039          3.39
+ Sub-total           |
+  D+L pooled SMD     |    0.760     0.439     1.082         43.14
+---------------------+---------------------------------------------------
+Overall              |           
+  D+L pooled SMD     |    0.457     0.205     0.709        100.00
+---------------------+---------------------------------------------------
+
+Test(s) of heterogeneity:
+               Heterogeneity  degrees of
+                 statistic     freedom      P    I-squared**   Tau-squared
+
+add-on              24.41          4      0.000     83.6%       0.6367
+augmentation        10.00          7      0.188     30.0%       0.0400
+monotherapy         20.13          9      0.017     55.3%       0.1417
+Overall             75.62         22      0.000     70.9%       0.2503
+** I-squared: the variation in SMD attributable to heterogeneity)
+
+Note: between group heterogeneity not calculated;
+only valid with inverse variance method
+
+Significance test(s) of SMD=0
+
+add-on                z=  0.11     p = 0.909
+augmentation          z=  3.41     p = 0.001
+monotherapy           z=  4.63     p = 0.000
+Overall               z=  3.55     p = 0.000
+-------------------------------------------------------------------------
+
+
+ metan s_bas_ntotal s_end_media_dep s_end_sd a_bas_ntotal a_end_media_dep a_end_sd_dep, label(namevar=author, yearvar=year) random hedges nointeger by ( treatmentresistantdepression )
+
+           Study     |     SMD   [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+     yes
+BLUMBERGER et al. (2 |   -0.132    -0.936     0.672          3.94
+PALM, U. et al. (201 |    0.594    -0.264     1.452          3.74
+SAMPAIO-JUNIOR, B. e |    0.969     0.428     1.511          5.05
+BRUNONI, A.R. et al. |    0.745     0.221     1.270          5.13
+BRUNONI, A.R. et al. |    0.524     0.009     1.039          5.17
+LOO., C.K. et al.  ( |    0.303    -0.190     0.796          5.26
+DASTJERDI, G. et al  |   -1.237    -2.067    -0.407          3.84
+LOO et al. (Unipolar |   -0.526    -0.962    -0.091          5.51
+LOO et al. (Bipolar) |    1.105     0.397     1.813          4.33
+BRUNONI, A.R. et al. |    0.544     0.214     0.873          5.92
+BRUNONI, A.R. et al. |    0.436    -0.219     1.091          4.56
+MAYUR, P et al. (201 |   -0.386    -1.378     0.606          3.26
+NORD, C. et al (2019 |    0.257    -0.374     0.888          4.66
+SHARAFI, E et al. (2 |    1.759     0.899     2.620          3.73
+VIGOD, S et al. (201 |    1.085     0.132     2.039          3.39
+ Sub-total           |
+  D+L pooled SMD     |    0.404     0.078     0.730         67.50
+---------------------+---------------------------------------------------
+     no
+LOO., C.K. et al.  ( |   -0.135    -0.756     0.485          4.71
+VALIENGO, C.L. et al |    0.607     0.028     1.187          4.89
+PAVLOVA, E.L. et al. |    0.881     0.358     1.404          5.13
+ Sub-total           |
+  D+L pooled SMD     |    0.469    -0.113     1.052         14.73
+---------------------+---------------------------------------------------
+     3
+BOGGIO, P. S. et al. |    0.858     0.115     1.600          4.19
+SALEHINEJAD, M.A. et |    1.302     0.406     2.197          3.59
+SEGRAVE et al. (2014 |    0.241    -0.563     1.044          3.95
+FREGNI, F.  (2006)   |    1.186     0.163     2.209          3.16
+WELCH, E et al. (201 |   -0.483    -1.596     0.630          2.88
+ Sub-total           |
+  D+L pooled SMD     |    0.653     0.071     1.235         17.77
+---------------------+---------------------------------------------------
+Overall              |           
+  D+L pooled SMD     |    0.457     0.205     0.709        100.00
+---------------------+---------------------------------------------------
+
+Test(s) of heterogeneity:
+               Heterogeneity  degrees of
+                 statistic     freedom      P    I-squared**   Tau-squared
+
+yes                 59.21         14      0.000     76.4%       0.2968
+no                   6.19          2      0.045     67.7%       0.1793
+3                    8.35          4      0.080     52.1%       0.2269
+Overall             75.62         22      0.000     70.9%       0.2503
+** I-squared: the variation in SMD attributable to heterogeneity)
+
+Note: between group heterogeneity not calculated;
+only valid with inverse variance method
+
+Significance test(s) of SMD=0
+
+yes                   z=  2.43     p = 0.015
+no                    z=  1.58     p = 0.115
+3                     z=  2.20     p = 0.028
+Overall               z=  3.55     p = 0.000
+-------------------------------------------------------------------------
+
+
+
+
+. metacum a b,  lcols(author year) sortby(year) - sendo 'a' ES e'b' seES
+
+
+
+meta-regressões refeitas
+
+ metareg _ES F4xF8, wsse(_seES)
+
+Meta-regression                                       Number of obs  =      19
+REML estimate of between-study variance               tau2           =   .1558
+% residual variation due to heterogeneity             I-squared_res  =  59.26%
+Proportion of between-study variance explained        Adj R-squared  =  28.34%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       F4xF8 |  -.4809715   .2713925    -1.77   0.094     -1.05356    .0916165
+       _cons |    .644249   .1590974     4.05   0.001     .3085829    .9799152
+------------------------------------------------------------------------------
+
+. metareg _ES F4xSOR, wsse(_seES)
+
+Meta-regression                                       Number of obs  =      18
+REML estimate of between-study variance               tau2           =   .1036
+% residual variation due to heterogeneity             I-squared_res  =  49.62%
+Proportion of between-study variance explained        Adj R-squared  = -26.33%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      F4xSOR |  -.0016423   .2815072    -0.01   0.995     -.598411    .5951264
+       _cons |    .646335   .1466303     4.41   0.000     .3354926    .9571774
+------------------------------------------------------------------------------
+
+. metareg _ES F4xF3, wsse(_seES)
+
+Meta-regression                                       Number of obs  =      14
+REML estimate of between-study variance               tau2           =   .1016
+% residual variation due to heterogeneity             I-squared_res  =  51.08%
+Proportion of between-study variance explained        Adj R-squared  =  73.37%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       F4xF3 |  -1.883795   .6314953    -2.98   0.011    -3.259705   -.5078848
+       _cons |   .6464053   .1527551     4.23   0.001     .3135807      .97923
+------------------------------------------------------------------------------
+
+. 
+
+. metareg _ES monoxadd , wsse(_seES)
+
+Meta-regression                                       Number of obs  =      16
+REML estimate of between-study variance               tau2           =   .2877
+% residual variation due to heterogeneity             I-squared_res  =  69.12%
+Proportion of between-study variance explained        Adj R-squared  =  32.37%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+    monoxadd |  -.8634313   .3523414    -2.45   0.028    -1.619128   -.1077342
+       _cons |   .8107715   .1967112     4.12   0.001      .388868    1.232675
+------------------------------------------------------------------------------
+
+. metareg _ES monoxaug , wsse(_seES)
+
+Meta-regression                                       Number of obs  =      20
+REML estimate of between-study variance               tau2           =  .09471
+% residual variation due to heterogeneity             I-squared_res  =  46.44%
+Proportion of between-study variance explained        Adj R-squared  =  -3.19%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+    monoxaug |  -.4055362   .2105886    -1.93   0.070    -.8479664     .036894
+       _cons |   .7684656   .1449456     5.30   0.000     .4639463    1.072985
+------------------------------------------------------------------------------
+
+
+ metareg _ES MDDxpreg , wsse(_seES)
+
+Meta-regression                                       Number of obs  =      21
+REML estimate of between-study variance               tau2           =   .3238
+% residual variation due to heterogeneity             I-squared_res  =  72.74%
+Proportion of between-study variance explained        Adj R-squared  =  -0.77%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+    MDDxpreg |   .7135296   .7865608     0.91   0.376    -.9327611     2.35982
+       _cons |   .3719166    .156035     2.38   0.028     .0453317    .6985016
+------------------------------------------------------------------------------
+
+.  metareg _ES MDDxbipolar , wsse(_seES)
+
+Meta-regression                                       Number of obs  =      22
+REML estimate of between-study variance               tau2           =   .2971
+% residual variation due to heterogeneity             I-squared_res  =  71.34%
+Proportion of between-study variance explained        Adj R-squared  =   7.29%
+With Knapp-Hartung modification
+------------------------------------------------------------------------------
+         _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+ MDDxbipolar |   .6606432   .4855147     1.36   0.189    -.3521227    1.673409
+       _cons |   .3716857   .1517755     2.45   0.024     .0550875    .6882838
+------------------------------------------------------------------------------
+
+.  metareg _ES MDDxpoststroke , wsse(_seES)
+
+Meta-regression                                       Number of obs  =      21
+REML estimate of between-study variance               tau2           =   .3238
+% residual variation due to heterogeneity             I-squared_res  =  72.74%
+Proportion of between-study variance explained        Adj R-squared  =  -8.15%
+With Knapp-Hartung modification
+--------------------------------------------------------------------------------
+           _ES |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+---------------+----------------------------------------------------------------
+MDDxpoststroke |   .2354737   .6785979     0.35   0.732    -1.184848    1.655795
+         _cons |   .3719166    .156035     2.38   0.028     .0453317    .6985016
+--------------------------------------------------------------------------------
+
